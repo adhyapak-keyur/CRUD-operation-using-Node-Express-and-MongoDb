@@ -1,0 +1,28 @@
+<div class="form-group">
+        <a href="/employee"><button type="button" class="btn btn-danger"><i class="fa fa-database"></i>Create New Record</button></a>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>UserName</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Country</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+            <tr>
+                <td>{{this.userName}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.mobile}}</td>
+                <td>{{this.country}}</td>
+                <td>
+                    <a href="/employee/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                    <a href="/employee/delete/{{this._id}}"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
